@@ -1,0 +1,53 @@
+    <div class="container-fluid">
+            <div class="col-md-4"*ngFor="let medicine of medicines">
+                <div class="card">
+                    <div class="header">
+                        <h4 class="title"><a>{{medicine.medicineName}}</a></h4>
+                    </div>
+                    <div class="content">
+                        <ul class="list-unstyled team-members">
+                                    <li>
+                                        <div class="row">
+                                            <div class="col-xs-6">
+                                               Manufacturer : {{medicine.manufacturer}}
+                                                <br>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="row">
+                                            <div class="col-xs-6">
+                                                Type : {{medicine.type}}
+                                                <br>
+                                             </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="row">
+                                            <div class="col-xs-6">
+                                                Price : {{medicine.price}}
+                                                <br>
+                                             </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="row">
+                                            <div class="col-xs-6">
+                                                Expirydate : {{medicine.expiryDate}}
+                                                <br>
+                                             </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="row">
+                                            <div class="col-xs-6">
+                                                <button (click)= "deletemed(medicine)" class="btn btn-danger btn-fill btn-wd">Delete</button>
+                                                <br>
+                                             </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                         </div>          
+                </div>
+        </div>
+    </div>

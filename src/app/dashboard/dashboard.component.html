@@ -1,0 +1,62 @@
+<div class="col-lg-10 col-md-8">
+    <div class="card">
+        <div class="header">
+            <h4 class="title">Enter Medicine Details</h4>
+        </div>
+        <div class="content">
+            <form #f="ngForm" (ngSubmit)="submit(f)">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label>Medicine ID</label>
+                            <input type="text" name="medicineId" ngModel required class="form-control border-input" placeholder="Medicine ID">
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">Medicine Name</label>
+                            <input type="text" name="mname" ngModel required class="form-control border-input" placeholder="Email">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label>Manufacturer</label>
+                            <input type="text" name="manufact" ngModel required class="form-control border-input" placeholder="Manufacturer" value="">
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label>Type</label>
+                            <input type="text" name="type" ngModel required class="form-control border-input" placeholder="Type" value="">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-2">
+                        <div class="form-group">
+                            <label>Price</label>
+                            <input type="text" name="price" ngModel required pattern="\d*" class="form-control border-input" placeholder="-/" value="">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label>Expiry date</label>
+                            <input type="text"  name="edate" ngModel required  pattern="(0[1-9]|1[012])[- /.](0[1-9]|[12][0-9]|3[01])[- /.](19|20)\d\d" class="form-control border-input" placeholder="dd/mm/yyyy" value="">
+                        </div>
+                    </div>
+                </div>
+                <div class="text-center">
+                    <button [disabled]="!f.valid" type="submit" class="btn btn-info btn-fill btn-wd">--Add--</button>
+                </div>
+                <div class="clearfix"></div>
+            </form>
+        </div>
+    </div>
+</div>

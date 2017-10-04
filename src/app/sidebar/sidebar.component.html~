@@ -1,0 +1,30 @@
+
+<div class="sidebar-wrapper">
+    <div class="logo">
+        <div class="simple-text">
+            <div class="logo-img">
+            </div> <i class="ti-plus icon-danger"></i> Medical<br>Store Management
+        </div>
+    </div>
+    <ul class="nav">
+            <li *ngIf="isNotMobileMenu()">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                    <i class="ti-panel"></i>
+					<p>Stats</p>
+                </a>
+            </li>
+            <li *ngIf="isNotMobileMenu()">
+                <a href="#">
+					<i class="ti-settings"></i>
+					<p>Settings</p>
+                </a>
+            </li>
+            <li class="divider" *ngIf="isNotMobileMenu()"></li>
+        <li *ngFor="let menuItem of menuItems" routerLinkActive="active" class="{{menuItem.class}}">
+            <a [routerLink]="[menuItem.path]">
+                <i class="{{menuItem.icon}}"></i>
+                <p>{{menuItem.title}}</p>
+            </a>
+        </li>
+    </ul>
+</div>

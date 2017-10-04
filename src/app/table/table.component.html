@@ -1,0 +1,39 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card">
+                <div class="header">
+                    <h4 class="title">Search Medicine</h4>
+                    <div class="col-md-6">
+                        <input type="text" [(ngModel)]="searchText" class="form-control border-input" placeholder="Search" />
+                    </div>
+                </div>
+                <div class="content table-responsive table-full-width">
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th>Medicine Id</th>
+                                <th>medicine Name</th>
+                                <th>Manufacturer</th>
+                                <th>Type</th>
+                                <th>Price </th>
+                                <th>Expiry Date</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr  *ngFor="let medicine of medicines | category: searchText">                                
+                                <td>{{medicine.medicineId}}</td>
+                                <td>{{medicine.medicineName}}</td>
+                                <td>{{medicine.manufacturer}}</td>
+                                <td>{{medicine.price}}</td> 
+                                <td>{{medicine.type}}</td>
+                                <td>{{medicine.expiryDate}}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
